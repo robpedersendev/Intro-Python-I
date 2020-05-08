@@ -31,18 +31,6 @@ import sys
 import calendar
 from datetime import datetime
 
-
-def rend_cal(month=None, year=None):
-    if not month and not year:
-        year, month = [datetime.now().year, datetime.now().month]
-        calendar.prmonth(year, month)  # This function sets a default value for the parameters
-    elif month and not year:           # passed to it from a function that will be created. Once
-        year = datetime.now().year     # the values are passed to the function it will use an
-        calendar.prmonth(year, month)  # if/else/elif to determine the correct values and utilize
-    else:                              # the calendar.prmonth method to render the calendar with the
-        calendar.prmonth(year, month)  # specified values
-
-
 def parent(args):
     script_name, *args = sys.argv
     if not args:
@@ -55,3 +43,27 @@ def parent(args):
         rend_cal(month, year)         # of len(args) will do a specific function call or action.
     else:
         print("You did it wrong")
+
+
+def rend_cal(month=None, year=None):
+    if not month and not year:
+        year, month = [datetime.now().year, datetime.now().month]
+        calendar.prmonth(year, month)  # This function sets a default value for the parameters
+    elif month and not year:           # passed to it from a function that will be created. Once
+        year = datetime.now().year     # the values are passed to the function it will use an
+        calendar.prmonth(year, month)  # if/else/elif to determine the correct values and utilize
+    else:                              # the calendar.prmonth method to render the calendar with the
+        calendar.prmonth(year, month)  # specified values
+
+
+def utilization():
+    usage_msg = "\nNAME\n\t14_cal.py -- a simple calendar tool\n\n"
+    usage_msg += "USAGE\n\tpython 14_cal.py [month [year]]\n\n"
+    usage_msg += "DESCRIPTION\n\t"
+    desc = """If no arguments are passed, the current month's calendar will 
+        be printed. If one argument is passed, the corresponding month 
+        will be printed for the current year. If two arguments are 
+        passed, then the month for given month and year will be printed.\n"""
+    usage_msg += desc
+    print(usage_msg)
+    exit(1)
