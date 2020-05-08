@@ -30,3 +30,14 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+
+def rend_cal(month=None, year=None):
+    if not month and not year:
+        year, month = [datetime.now().year, datetime.now().month]
+        calendar.prmonth(year, month)  # This function sets a default value for the parameters
+    elif month and not year:           # passed to it from a function that will be created. Once
+        year = datetime.now().year     # the values are passed to the function it will use an
+        calendar.prmonth(year, month)  # if/else/elif to determine the correct values and utilize
+    else:                              # the calendar.prmonth method to render the calendar with the
+        calendar.prmonth(year, month)  # specified values
