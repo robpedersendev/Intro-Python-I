@@ -57,13 +57,17 @@ def rend_cal(month=None, year=None):
 
 
 def utilization():
-    usage_msg = "\nNAME\n\t14_cal.py -- a simple calendar tool\n\n"
-    usage_msg += "USAGE\n\tpython 14_cal.py [month [year]]\n\n"
-    usage_msg += "DESCRIPTION\n\t"
+    instruc = "\nNAME\n\t14_cal.py -- a simple calendar tool\n\n"
+    instruc += "USAGE\n\tpython 14_cal.py [month [year]]\n\n"
+    instruc += "DESCRIPTION\n\t"
     desc = """If no arguments are passed, the current month's calendar will 
         be printed. If one argument is passed, the corresponding month 
         will be printed for the current year. If two arguments are 
         passed, then the month for given month and year will be printed.\n"""
-    usage_msg += desc
-    print(usage_msg)
-    exit(1)
+    instruc += desc
+    print(instruc)
+    exit(1)  # If there is an error message, then print out in depth why it exited
+
+
+if __name__ == '__main__':  # Used to specify what to do when the file is ran
+    parent(sys.argv)        # Pass the command line provided information into the parent Func
