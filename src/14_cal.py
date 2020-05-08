@@ -41,3 +41,17 @@ def rend_cal(month=None, year=None):
         calendar.prmonth(year, month)  # if/else/elif to determine the correct values and utilize
     else:                              # the calendar.prmonth method to render the calendar with the
         calendar.prmonth(year, month)  # specified values
+
+
+def parent(args):
+    script_name, *args = sys.argv
+    if not args:
+        rend_cal()                    # This function will act as the parent function and will be the
+    elif len(args) == 1:              # function that is directly called. Everything else will be a
+        month = int(args[0])          # child function and receive data or do something based off of
+        rend_cal(month)               # this function.
+    elif len(args) == 2:
+        month, year = map(int, args)  # This takes data from the CLI, passes it to args and based off
+        rend_cal(month, year)         # of len(args) will do a specific function call or action.
+    else:
+        print("You did it wrong")
