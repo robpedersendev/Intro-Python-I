@@ -17,9 +17,9 @@ class LatLon:
 
 
 class Waypoint(LatLon):
-    def __init__(self, name):
+    def __init__(self, name, lat, lon):
+        super().__init__(lat, lon)
         self.name = name
-        super().__init__(name)
 
 
 # Make a class Geocache that can be passed parameters `name`, `difficulty`,
