@@ -9,3 +9,6 @@ number = int(input("What is the number? "))
 power_to_the = int(input("What is the power? "))
 
 print(f"That result is {number**power_to_the}")
+
+
+

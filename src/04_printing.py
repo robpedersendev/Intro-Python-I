@@ -22,3 +22,8 @@ print('x is {1} y is {2} z is {0}'.format("I like turtles!", 10, 2.24552))
 
 # Finally, print the same thing using an f-string
 print(f'x is {x} y is {y} z is {z}')
+
+f'x is {x}, y is {y}, z is {z}'
+# Finally, print the same thing using an f-string
+'x is {}, y is {}, z is {}'.format(x,y,z)
+

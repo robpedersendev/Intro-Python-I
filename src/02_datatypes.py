@@ -14,12 +14,9 @@ y = "7"
 # Write a print statement that combines x + y into the integer value 12
 
 # YOUR CODE HERE
-z = x + int(y)
-print(z)
-
+print(x+int(y))
 # Write a print statement that combines x + y into the string value 57
 
 # YOUR CODE HERE
+print(str(x) + y)
 
-string = str(x) + y
-print(string)

@@ -1,6 +1,6 @@
 # For the exercise, look up the methods and functions that are available for use
 # with Python lists.
-
+# https://developers.google.com/edu/python/lists
 x = [1, 2, 3]
 y = [8, 9, 10]
 
@@ -9,11 +9,13 @@ y = [8, 9, 10]
 # Change x so that it is [1, 2, 3, 4]
 # YOUR CODE HERE
 x.append(4)
+
 print("Problem One: ",x)
 
 # Using y, change x so that it is [1, 2, 3, 4, 8, 9, 10]
 # YOUR CODE HERE
 x.extend(y)
+
 print("Problem Two: ",x)
 
 # Change x so that it is [1, 2, 3, 4, 9, 10]
@@ -34,3 +36,4 @@ print("Problem Five: ", len(x))
 # YOUR CODE HERE
 
 print("Problem Four: ", [num*1000 for num in x])
+

@@ -6,23 +6,32 @@ level operating system functionality.
 """
 
 import sys
+from sys import platform
+import os
+
 # See docs for the sys module: https://docs.python.org/3.7/library/sys.html
 
 # Print out the command line arguments in sys.argv, one per line:
 # YOUR CODE HERE
-print("Script name: argv[0] (operating system dependant).")
-print("Command Line Option: -c (present if executed with command line option).")
-
+for i in sys.argv[0:]:
+    print(i)
 # Print out the OS platform you're using:
 # YOUR CODE HERE
-print(sys.getwindowsversion().platform)
-print()
+if platform == "linux" or platform == "linux2":
+    print("linux")
+elif platform == "darwin":
+    print("OS X")
+elif platform == "win32":
+    print("Windows")
 
 # Print out the version of Python you're using:
 # YOUR CODE HERE
-print(sys.version_info.major,'.',sys.version_info.minor,'.',sys.version_info.micro)
+if sys.version_info.major == 3:
+    print('Python3')
+else:
+    print('Python2')
+# Python3
 
-import os
 # See the docs for the OS module: https://docs.python.org/3.7/library/os.html
 
 # Print the current process ID
@@ -36,4 +45,5 @@ print(os.getcwd())
 # Print out your machine's login name
 # YOUR CODE HERE
 print(os.getlogin())
+
 
