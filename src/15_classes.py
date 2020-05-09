@@ -8,7 +8,8 @@ class LatLon:
     def __init__(self, lat, lon):
         self.lat = lat
         self.lon = lon
-
+     def __str__(self):
+            return f"{self.lat}, {self.lon}"
 
 # Make a class Waypoint that can be passed parameters `name`, `lat`, and `lon` to the
 # constructor. It should inherit from LatLon. Look up the `super` method.
