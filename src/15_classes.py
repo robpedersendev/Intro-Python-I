@@ -39,10 +39,7 @@ class Geocache(Waypoint):
 
 # YOUR CODE HERE
 
-
 waypoint = Waypoint(name="Catacombs", lat="41.70505", lon="-121.51521")
-
-print(waypoint)
 
 # Without changing the following line, how can you make it print into something
 # more human-readable? Hint: Look up the `object.__str__` method
@@ -53,4 +50,4 @@ print(waypoint)
 # YOUR CODE HERE
 
 # Print it--also make this print more nicely
-print(geocache)
+# print(geocache)
