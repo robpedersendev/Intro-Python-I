@@ -42,7 +42,7 @@ def parent(args):
         month, year = map(int, args)  # This takes data from the CLI, passes it to args and based off
         rend_cal(month, year)  # of len(args) will do a specific function call or action.
     else:
-        print("You did it wrong")
+        print(utilization())
 
 
 def rend_cal(month=None, year=None):
